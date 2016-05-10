@@ -43,7 +43,7 @@ public class Controller implements Initializable {
     @FXML private TextArea crawl_pagesInfo;
     @FXML private ListView crawl_docList;
 
-    // Test
+    // Commit 3 test
 
     private Service<Void> backgroundThread;
 
@@ -99,7 +99,7 @@ public class Controller implements Initializable {
 
                             ObservableList<String> oList = FXCollections.observableArrayList(spider.getDocIDArrayList());
 
-                            crawl_docList.getItems().addAll(oList);
+                            //crawl_docList.getItems().addAll(oList);
                             //crawl_pagesCrawled.setText(Integer.toString(spider.getNumberOfLinksAlreadyVisited()));
                             //crawl_pagesDiscarded.setText(Integer.toString(spider.getNumberOfDiscardedLinks()));
                             //crawl_pagesCrawled.setText("hello");

@@ -26,7 +26,7 @@
       <content>
         <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="457.0" prefWidth="701.0">
                <children>
-                  <TextField fx:id="crawl_seedURL" layoutX="14.0" layoutY="14.0" prefHeight="25.0" prefWidth="536.0" promptText="Starting URL here..." text="http://www.loc.gov/poetry/180/p180-list.html" AnchorPane.topAnchor="14.0" />
+                  <TextField fx:id="crawl_seedURL" layoutX="14.0" layoutY="14.0" prefHeight="25.0" prefWidth="536.0" promptText="Starting URL here..." text="http://en.wikipedia.org/wiki/List_of_Solar_System_objects_by_size" AnchorPane.topAnchor="14.0" />
                   <TextField fx:id="crawl_maxPages" alignment="CENTER_RIGHT" layoutX="721.0" layoutY="14.0" prefHeight="25.0" prefWidth="63.0" promptText="Max pages" text="20" />
                   <TextArea fx:id="crawl_textArea" editable="false" layoutX="15.0" layoutY="180.0" prefHeight="377.0" prefWidth="376.0" />
                   <Button fx:id="crawl_startButton" layoutX="564.0" layoutY="14.0" mnemonicParsing="false" onAction="#handleStartCrawl" prefHeight="25.0" prefWidth="57.0" text="Start" />
