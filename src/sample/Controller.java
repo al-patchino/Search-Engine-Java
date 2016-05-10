@@ -120,7 +120,8 @@ public class Controller implements Initializable {
             }
         });
 
-        //crawl_textArea.textProperty().bind(backgroundThread.messageProperty());
+        crawl_textArea.textProperty().bind(backgroundThread.messageProperty());
+        //Testing commit 2
         //crawl_pagesCrawled.textProperty().bind(backgroundThread.messageProperty());
         //crawl_pagesDiscarded.textProperty().bind(backgroundThread.messageProperty());
 
