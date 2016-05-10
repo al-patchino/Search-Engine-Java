@@ -41,6 +41,8 @@ public class InvertedIndex {
     static void Indexer(String token, int docID, int totalNumOfWords,
                         int tokenPosition) {
 
+        //System.out.println("TokenPosition" + tokenPosition);
+
         if (invertedIndex.containsKey(token)) {
 
 			/*
@@ -48,6 +50,10 @@ public class InvertedIndex {
 			 * increment term frequency.
 			 */
             if (invertedIndex.get(token).containsKey(docID)) {
+
+
+
+
 
 				/* Increment term frequency */
                 invertedIndex

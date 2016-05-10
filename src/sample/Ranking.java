@@ -32,9 +32,8 @@ public class Ranking {
         for (Integer docIDKey : InvertedIndex.invertedIndex.get(token).keySet()) {
 
 			/* To avoid division by 0, overwrite it to a small number. */
-            if (IDF == 0) {
-                IDF = 0.000001;
-            }
+            if (IDF == 0) IDF = 0.00001;
+
 
 			/* Iterating through all documents containing token, and setting IDF */
             InvertedIndex.invertedIndex.get(token).get(docIDKey)
@@ -50,8 +49,10 @@ public class Ranking {
             System.out.println("token position " + tokenPosition);
 
 			/* Calculates a modifies tf*idf with a weighted token positon */
-            double currentTfIdf = currentTf * IDF
-                    * ((1000 / tokenPosition) + 1);
+           // double currentTfIdf = currentTf * IDF
+                   // * ((1000 / tokenPosition) + 1);
+
+            double currentTfIdf = currentTf * IDF * ((1000 / (tokenPosition*tokenPosition)) + 1);
 
 			/* Sets TF*IDF */
             InvertedIndex.invertedIndex.get(token).get(docIDKey)

@@ -33,7 +33,7 @@ public class TextAnalyser {
         if(listOfStopWords.isEmpty()) loadStopWords();
 
         // Breaks a body of text into tokens, param2 are the delimiters
-        StringTokenizer st = new StringTokenizer(pageText,
+        StringTokenizer st = new StringTokenizer(pageTitle + pageText,
                 "\":;¬`|– —,._?!&$/*=<>[]()-\t\n");
 
         String token = null;
@@ -61,7 +61,7 @@ public class TextAnalyser {
                 InvertedIndex.Indexer(token, docID, totalNumOfWords,
                         tokenPosition);
             } else {
-				System.out.print("(Stopword: " + token + ") ");
+				//System.out.print("(Stopword: " + token + ") ");
             }
         }
 

@@ -97,13 +97,11 @@ public class Controller implements Initializable {
                             crawl_pagesInfo.appendText("Links discarded: \t" +
                                     Integer.toString(spider.getNumberOfDiscardedLinks()) + "\n");
 
-                            ObservableList<String> oList = FXCollections.observableArrayList(spider.getDocIDArrayList());
+                            //ObservableList<String> oList = FXCollections.observableArrayList(spider.getDocIDArrayList());
 
                             //crawl_docList.getItems().addAll(oList);
                             //crawl_pagesCrawled.setText(Integer.toString(spider.getNumberOfLinksAlreadyVisited()));
                             //crawl_pagesDiscarded.setText(Integer.toString(spider.getNumberOfDiscardedLinks()));
-                            //crawl_pagesCrawled.setText("hello");
-                            //crawl_pagesDiscarded.setText("Hello");
                         }
                         spider.printDocIDToURL();
 
@@ -121,7 +119,6 @@ public class Controller implements Initializable {
         });
 
         crawl_textArea.textProperty().bind(backgroundThread.messageProperty());
-        //Testing commit 2
         //crawl_pagesCrawled.textProperty().bind(backgroundThread.messageProperty());
         //crawl_pagesDiscarded.textProperty().bind(backgroundThread.messageProperty());
 
@@ -160,10 +157,14 @@ public class Controller implements Initializable {
                    // loadPage("http://" + userQueryTextbox.getText());
                     webEngine.load("http://" + search_searchBar.getText());
 
+                    return;
+
                 } else {
 						/* Display HTML to JEditorPane */
                     //loadPage(userQueryTextbox.getText());
                     webEngine.load(search_searchBar.getText());
+
+                    return;
                 }
             }
 
@@ -232,10 +233,6 @@ public class Controller implements Initializable {
     public void handleBackToSearchResults(ActionEvent actionEvent) {
 
         final WebEngine webEngine = webBrowser.getEngine();
-
-       // webBrowser.
-
-
 
         if(!Ranking.searchResults.isEmpty()){
             String results = Ranking.showSearchResults();

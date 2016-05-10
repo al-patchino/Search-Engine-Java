@@ -24,6 +24,7 @@ import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 
 /************************************************************************************************
+ *
  * Project : A Search Engine in Java 4.0.1
  *
  *
@@ -47,14 +48,12 @@ public class Main extends Application {
    public void start(Stage primaryStage) throws Exception{
         Parent root = FXMLLoader.load(getClass().getResource("sample.fxml"));
         primaryStage.setTitle("Search Engine 1.4");
-        primaryStage.setScene(new Scene(root, 900, 600));
+        primaryStage.setScene(new Scene(root, 800, 600));
         primaryStage.show();
         primaryStage.setResizable(false);
      }
 
     public static void main(String[] args) {
         launch(args);
-
-        System.out.println("Hello pls");
     }
 }
